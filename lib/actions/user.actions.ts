@@ -153,7 +153,7 @@ throw error;
 }
 }
 
-export async function getActivity(userId: string) {
+export async function getActivity({userId}:{userId:string}) {
 try {
 connectToDB();
 
