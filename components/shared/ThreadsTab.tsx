@@ -17,7 +17,7 @@ export default async function ThreadsTab(
 
         const result=accountType=='Community' ? await fetchCommunityPosts(accountId) : await fetchUserPosts(accountId)
 
-        console.log(result)
+        // result.threads.forEach((t:any)=>console.log(t.text))
         if(!result) redirect('/')
     return(
         <section className=' mt-9 flex flex-col gap-10 '>

@@ -11,6 +11,7 @@ interface LeftSidebarProps{
 export default function LeftSidebar({}:LeftSidebarProps ){
     const router=useRouter()
     const pathname=usePathname()
+    console.log(pathname)
     const {userId}= useAuth()
     return(
         <section className=" custom-scrollbar leftsidebar">

@@ -79,6 +79,10 @@ const communityPosts = await Community.findById(id).populate({
     model: Thread,
     populate: [
     {
+        path:'community',
+        model:Community
+    },
+    {
         path: "author",
         model: User,
         select: "name image id", // Select the "name" and "_id" fields from the "User" model

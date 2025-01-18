@@ -64,9 +64,9 @@ async function Page({params}:pageProps ){
                         </TabsContent>
 
                         {/* Memebers */}
-                        <TabsContent className=" w-full text-light-1" value={'threads'} >
+                        <TabsContent className=" w-full text-light-1" value={'members'} >
                             <section className="mt-9 flex flex-col gap-10">
-                                {communityDetails?.member.map((member:any)=>(
+                                {communityDetails?.members?.map((member:any)=>(
                                     <UserCard
                                         key={member.id}
                                         id={member.id}
@@ -79,7 +79,7 @@ async function Page({params}:pageProps ){
                             </section>
                         </TabsContent>
 
-                        <TabsContent className=" w-full text-light-1" value={'threads'} >
+                        <TabsContent className=" w-full text-light-1" value={'requests'} >
                             <ThreadsTab
                                 currentUserId={user.id}
                                 accountId={communityDetails._id}
